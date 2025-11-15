@@ -13,3 +13,8 @@ def test_client():
 def test_negative_number():
     responce = client.get("/get_fib/-30")
     assert responce.status_code == 400
+
+
+def test_zero():
+    responce = client.get("/get_fib/0")
+    assert responce.status_code == 400
